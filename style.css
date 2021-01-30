@@ -131,7 +131,7 @@ nav ul li a:hover, a.active{
 }
 .final-details{
     border: 2px solid rgb(88, 85, 85);
-    margin: 20px 0;
+    margin: 20px 80px;
     padding: 30px 30px;
     text-align: left;
     text-decoration: wavy;
