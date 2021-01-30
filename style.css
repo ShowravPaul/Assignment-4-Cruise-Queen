@@ -98,7 +98,7 @@ nav ul li a:hover, a.active{
 }
 .plus-minus-btn{
     font-size:20px;
-    padding: 5px 8px 5px 8px;
+    padding: 5px 10px 5px 10px;
     margin: 15px 5px 0px 0px;
     word-spacing: 20px;
 }
@@ -120,4 +120,30 @@ nav ul li a:hover, a.active{
 .amount{
     display: flex;
     justify-content: space-between;
+}
+.page-2{
+    display: none;
+    margin: 100px 200px;
+    text-align: center;
+    color: white;
+    background-color: rgb(245, 171, 33);
+    padding: 70px 100px;
+}
+.final-details{
+    border: 2px solid rgb(88, 85, 85);
+    margin: 20px 0;
+    padding: 30px 30px;
+    text-align: left;
+    text-decoration: wavy;
+}
+.page-2 h3{
+    color: rgb(73, 8, 131);
+}
+.done{
+    color: rgb(9, 141, 5);
+}
+.page-2-close-btn{
+    margin-top: 30px;
+    padding: 3px 3px;
+    color: black;
 }

@@ -27,7 +27,7 @@
     </header>
 
     <!--Booking Section-->
-    <main class="main-content container">
+    <main id="first-page" class="main-content container">
 
         <div class="booking-content">
             <h1>Cruise Queen</h1>
@@ -114,13 +114,28 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button onclick="handleBookNowButton()" class="btn-style">Book Now</button>
         </div>
     </main>
 
-    <!--Thank You-->
+    <div id="second-page" class="page-2">
+        <h1 class="done">Successfully done!</h1>
+        <div class="final-details">
+            <p>First Class ticket: <span id="final-f-class-ticket">0</span></p>
+            <br>
+            <p>Economy ticket: <span id="final-economy-ticket">0</span></p>
+            <br>
+            <p>Total ticket price: <span id="final-ticket-price">0</span></p>
+        </div>
+        <h3>You will get an email soon!</h3>
+        <br>
+        <h2 class="done">Thanks for being with us! Have a Good Day!!</h2>
+        <button class="page-2-close-btn" type="button"><a href="index.html">Close</a> </button>
+    </div>
 
-    <script>//product -> ticket
+    <!--JS part started-->
+
+    <script>
         function handleProductChange(product, isIncrease) {
             const productInput = document.getElementById(product + '-count');
             const productCount = parseInt(productInput.value);
@@ -148,6 +163,10 @@
 
             const grandTotal = totalPrice + vat;
             document.getElementById('grand-total').innerText = '$' + grandTotal;
+
+            document.getElementById('final-f-class-ticket').innerText = firstClassCount;
+            document.getElementById('final-economy-ticket').innerText = economyCount;
+            document.getElementById('final-ticket-price').innerText = '$' + grandTotal;
         }
 
 
@@ -155,6 +174,15 @@
             const productInput = document.getElementById(product + '-count').value;
             const productCount = parseInt(productInput);
             return productCount;
+        }
+
+
+        function handleBookNowButton() {
+            const firstPage = document.getElementById("first-page");
+            firstPage.style.display = "none";
+
+            const secondPage = document.getElementById("second-page");
+            secondPage.style.display = "block";
         }
     </script>
 </body>
